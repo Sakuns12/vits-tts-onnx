@@ -77,7 +77,7 @@ python preprocess.py --filelists filelists/train.txt filelists/val.txt
 python audio_preprocess.py
 
 # 3. Start Training
-# For the KSS dataset, 200~300 epochs are sufficient for decent voice quality (approx. 300,000 steps).
+# For the KSS dataset, 300~500 epochs are sufficient for decent voice quality (approx. 300,000 steps).
 # Excessive training may lead to overfitting. It is recommended to listen to generated samples periodically.
 ./train_16k.sh
 ```
