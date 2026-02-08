@@ -55,7 +55,7 @@ pip install ko_pron mecab-python3
 
 🚀 Usage</br>
 1. Preprocessing & Training</br>
-This guide is based on the KSS Dataset. You can use your own dataset, but it must follow the format of the train.txt file (Audio Path | Text | ...).
+This guide is based on the KSS Dataset. You can use your own dataset, but it must follow the format of the train.txt file (dataset/KO/1_0000.wav|[KO]그는 괜찮은 척하려고 애쓰는 것 같았다.[KO]).
 
 ```Bash
 # 1. Text Preprocessing
