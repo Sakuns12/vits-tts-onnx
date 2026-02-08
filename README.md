@@ -60,7 +60,7 @@ This guide is based on the KSS Dataset. You can use your own dataset, but it mus
 ```Bash
 # 1. Text Preprocessing
 # Generates filelists/train.txt.cleaned from raw text
-python preprocess.py --filelists filelists/train.txt filelists/val.txt --text_cleaners korean_cleaners
+python preprocess.py --filelists filelists/train.txt filelists/val.txt
 
 # 2. Audio Preprocessing
 # The KSS dataset (audiobook) contains about 1 second of silence at the beginning.
