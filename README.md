@@ -54,7 +54,7 @@ pip install ko_pron mecab-python3
 ```
 
 🚀 Usage</br>
-1. Preprocessing & Training
+1. Preprocessing & Training</br>
 This guide is based on the KSS Dataset. You can use your own dataset, but it must follow the format of the train.txt file (Audio Path | Text | ...).
 
 ```Bash
@@ -73,7 +73,7 @@ python audio_preprocess.py
 ./train_16k.sh
 ```
 
-2. Export ONNX
+2. Export ONNX</br>
 Rename the final trained checkpoint (e.g., G_300000.pth) to G_0.pth (or modify the script path) and convert it to an ONNX file.
 
 ```Bash
@@ -82,7 +82,7 @@ python export_onnx.py
 Output: ko_16k.onnx (Filename may vary based on configuration)
 ```
 
-3. ONNX Inference
+3. ONNX Inference</br>
 Perform high-speed inference on CPU using the converted model.
 
 ```Bash
@@ -90,7 +90,7 @@ python inference_onnx.py
 Result: Generates result_onnx.wav and prints the RTF to the console.
 ```
 
-⚠️ Troubleshooting & Technical Notes
+⚠️ Troubleshooting & Technical Notes</br>
 To prevent common ONNX conversion errors (such as aten::lift_fresh and Unknown type: complex), the stft.py file has been modified.
 
 Issue: PyTorch's default stft/istft functions return complex numbers, which causes compatibility issues during ONNX export.
@@ -124,10 +124,10 @@ Average RTF            : 0.1820 (Lower is better)
 ----------------------------------------
 ```
 
-🔗 Reference
+🔗 Reference</br>
 Original Repository: https://github.com/kdrkdrkdr/JK-VITS
 
-🙏 Acknowledgements
+🙏 Acknowledgements</br>
 This project is built upon the excellent work of JK-VITS by kdrkdrkdr.
 
 I would like to express my sincere gratitude to the original author for open-sourcing the VITS implementation. Their contribution laid the solid foundation that made this optimization and ONNX conversion project possible.
