@@ -14,7 +14,7 @@ import time  # [추가] 시간 측정을 위해 필요
 
 def main():
     # 1. 설정 변수
-    model_name = 'ko_voip_8k'
+    model_name = 'ko_16k'
     config_file = f"./configs/{model_name}.json"
     model_file = f"./logs/{model_name}/G_0.pth"
     output_wav = "result.wav"  # 결과가 저장될 파일명
