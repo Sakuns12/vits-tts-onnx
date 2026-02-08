@@ -55,7 +55,17 @@ pip install ko_pron mecab-python3
 
 🚀 Usage</br>
 1. Preprocessing & Training</br>
-This guide is based on the KSS Dataset. You can use your own dataset, but it must follow the format of the train.txt file (dataset/KO/1_0000.wav|[KO]그는 괜찮은 척하려고 애쓰는 것 같았다.[KO]).
+This guide is based on the **KSS Dataset**. You can use your own dataset, but it must follow the specific format of the `train.txt` file (Audio Path | Text).
+
+**⚠️ Important Audio Requirement:**
+Since this project targets a **16kHz** model, **all audio files in your dataset must be resampled to 16,000Hz** before training. Using 44.1kHz or 24kHz audio without resampling will result in incorrect pitch or training failure.
+
+**Dataset Format Example:**
+```text
+dataset/KO/1_0000.wav|[KO]그는 괜찮은 척하려고 애쓰는 것 같았다.[KO]
+dataset/KO/1_0001.wav|[KO]안녕하세요.[KO]
+...
+
 
 ```Bash
 # 1. Text Preprocessing
